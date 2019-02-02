@@ -14,6 +14,6 @@ with open('servers.txt') as fp:
             continue
         print "testing: " + line
         id = line.split(')')[0]
-        os.system("speedtest-cli --csv --server " +id+ " >> result.csv")
+        os.system("python ./speedtest-cli/speedtest.py --csv --server " +id+ " >> result.csv")
         print "Sleep for 10 sec"
         sleep(10)
